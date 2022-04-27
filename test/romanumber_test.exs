@@ -12,10 +12,19 @@ defmodule RomanNumberConverterTest do
 		assert RomanNumberConverter.numeral(8) == "VIII"
 		assert RomanNumberConverter.numeral(9) == "IX"
 	end #test "1. Numeral(1)" do
-	
+		
 	@tag :pending
 	test "2. Numeral(10)" do
 		assert RomanNumberConverter.numeral(10) == "X"
+		assert RomanNumberConverter.numeral(20) == "XX"
+		assert RomanNumberConverter.numeral(23) == "XXIII"
+		assert RomanNumberConverter.numeral(30) == "XXX"
+		assert RomanNumberConverter.numeral(34) == "XXXIV"
+		assert RomanNumberConverter.numeral(40) == "XL"
+		assert RomanNumberConverter.numeral(6) == "VI"
+		assert RomanNumberConverter.numeral(7) == "VII"
+		assert RomanNumberConverter.numeral(8) == "VIII"
+		assert RomanNumberConverter.numeral(9) == "IX"
 	end #test "2. Numeral(10)" do
   
     @tag :pending
