@@ -1,2 +1,2 @@
-# elixir_roman_number
+# Elixir Roman Number
 Converter a number to roman
