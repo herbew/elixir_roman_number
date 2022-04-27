@@ -3,6 +3,14 @@ defmodule RomanNumberConverterTest do
 	@tag :pending
 	test "1. Numeral(1)" do
 		assert RomanNumberConverter.numeral(1) == "I"
+		assert RomanNumberConverter.numeral(2) == "II"
+		assert RomanNumberConverter.numeral(3) == "III"
+		assert RomanNumberConverter.numeral(4) == "IV"
+		assert RomanNumberConverter.numeral(5) == "V"
+		assert RomanNumberConverter.numeral(6) == "VI"
+		assert RomanNumberConverter.numeral(7) == "VII"
+		assert RomanNumberConverter.numeral(8) == "VIII"
+		assert RomanNumberConverter.numeral(9) == "IX"
 	end #test "1. Numeral(1)" do
 	
 	@tag :pending
