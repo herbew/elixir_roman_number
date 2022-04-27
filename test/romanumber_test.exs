@@ -48,7 +48,7 @@ defmodule RomanNumberConverterTest do
 	test "5. Numeral(500)" do
 		assert RomanNumberConverter.numeral(500) == "D"
 		#assert RomanNumerals.numeral(553) == "DLIII"
-		assert RomanNumerals.numeral(624) == "DCXXIV"
+		#assert RomanNumerals.numeral(624) == "DCXXIV"
 		assert RomanNumerals.numeral(999) == "CMXCIX"
 	end #test "5. Numeral(500)" do
 	
