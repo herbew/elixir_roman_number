@@ -1,15 +1,21 @@
 defmodule RomanNumberConverter do
 	@doc"""
 	  - Convert number to covert a roman.
+	  - div(dividend, divisor) 
+	    This function is used to get the quotient on division.
+	  - rem(dividend, divisor) --Modulo
+	  	This function is used to get the remainder on division.
     
   	"""
 	@spec numeral(Integer) :: String.t()
   	def numeral(number) do
+  		# DIV 1000 as n
   		case div(number, 1000) do
   			n when n >= 1 ->
         		String.duplicate("M", n) <> numeral(rem(number, 1000))
         		
             n when n < 1 ->
+            	# DIV 500 as m
 		        case div(number, 500) do
 		        	m when m >= 1 and number >= 900 ->
 		            	"CM" <> numeral(rem(number, 100))
@@ -27,31 +33,32 @@ defmodule RomanNumberConverter do
 		            	<> numeral(rem(number, 100))
 		            	
 		            _ when number < 100 ->
-            		case div(number, 50) do
-            			o when o >= 1 and number >= 90 ->
-                			"XC" <> numeral(rem(number, 10))
-                			
-						o when o >= 1 and number < 90 ->
-                			"L" <> String.duplicate("X", \
-                			div(rem(number, 50), 10)) \
-                			<> numeral(rem(number, 10))
-                			
-                		o when o < 1 and number >= 40 ->
-                			"XL" <> numeral(rem(number, 10))
-                			
-                		o when o < 1 and number >= 10 ->
-                			String.duplicate("X", div(number, 10)) \
-                			<> numeral(rem(number, 10))
-						_ when number < 10 ->
-							case div(number, 5) do
-								p when p >= 1 and number == 9 -> "IX"
-				                p when p >= 1 and number >= 5 ->
-				                    "V" <> String.duplicate("I", rem(number, 5))
-				                p when p < 1 and number == 4 -> "IV"
-				                _ ->
-                    				String.duplicate("I", number)
-							end #case div(number, 5) do
-            		end #case div(number, 50) do
+		            	# DIV 50 as o
+	            		case div(number, 50) do
+	            			o when o >= 1 and number >= 90 ->
+	                			"XC" <> numeral(rem(number, 10))
+	                			
+							o when o >= 1 and number < 90 ->
+	                			"L" <> String.duplicate("X", \
+	                			div(rem(number, 50), 10)) \
+	                			<> numeral(rem(number, 10))
+	                			
+	                		o when o < 1 and number >= 40 ->
+	                			"XL" <> numeral(rem(number, 10))
+	                			
+	                		o when o < 1 and number >= 10 ->
+	                			String.duplicate("X", div(number, 10)) \
+	                			<> numeral(rem(number, 10))
+							_ when number < 10 ->
+								case div(number, 5) do
+									p when p >= 1 and number == 9 -> "IX"
+					                p when p >= 1 and number >= 5 ->
+					                    "V" <> String.duplicate("I", rem(number, 5))
+					                p when p < 1 and number == 4 -> "IV"
+					                _ ->
+	                    				String.duplicate("I", number)
+								end #case div(number, 5) do
+	            		end #case div(number, 50) do
 		        end #case div(number, 500) do
   		end #case div(number, 1000) do
   	end # def numeral(number) do

@@ -37,19 +37,19 @@ defmodule RomanNumberConverterTest do
 	@tag :pending
 	test "4. Numeral(100)" do
 		assert RomanNumberConverter.numeral(100) == "C"
-		#assert RomanNumerals.numeral(103) == "CIII"
-		#assert RomanNumerals.numeral(150) == "CL"
-		#assert RomanNumerals.numeral(178) == "CLXXVIII"
-		#assert RomanNumerals.numeral(350) == "CCCL"
-		#assert RomanNumerals.numeral(403) == "CDIII"
+		assert RomanNumberConverter.numeral(103) == "CIII"
+		assert RomanNumberConverter.numeral(150) == "CL"
+		assert RomanNumberConverter.numeral(178) == "CLXXVIII"
+		assert RomanNumberConverter.numeral(350) == "CCCL"
+		assert RomanNumberConverter.numeral(403) == "CDIII"
 	end #test "4. Numeral(100)" do
 	
 	@tag :pending
 	test "5. Numeral(500)" do
 		assert RomanNumberConverter.numeral(500) == "D"
-		#assert RomanNumerals.numeral(553) == "DLIII"
-		#assert RomanNumerals.numeral(624) == "DCXXIV"
-		#assert RomanNumerals.numeral(999) == "CMXCIX"
+		assert RomanNumberConverter.numeral(553) == "DLIII"
+		assert RomanNumberConverter.numeral(624) == "DCXXIV"
+		assert RomanNumberConverter.numeral(999) == "CMXCIX"
 	end #test "5. Numeral(500)" do
 	
 	@tag :pending
