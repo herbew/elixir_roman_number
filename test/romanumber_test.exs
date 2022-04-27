@@ -22,22 +22,40 @@ defmodule RomanNumberConverterTest do
 		assert RomanNumberConverter.numeral(34) == "XXXIV"
 		assert RomanNumberConverter.numeral(40) == "XL"
 		assert RomanNumberConverter.numeral(46) == "XLVI"
+	end #test "2. Numeral(10)" do
+  
+    @tag :pending
+	test "3. Numeral(50)" do
 		assert RomanNumberConverter.numeral(50) == "L"
 		assert RomanNumberConverter.numeral(58) == "LVIII"
 		assert RomanNumberConverter.numeral(60) == "LX"
 		assert RomanNumberConverter.numeral(70) == "LXX"
-		assert RomanNumberConverter.numeral(80) == "LXX"
+		assert RomanNumberConverter.numeral(80) == "LXXX"
 		assert RomanNumberConverter.numeral(90) == "XC"
-	end #test "2. Numeral(10)" do
-  
-    @tag :pending
-	test "3. Numeral(100)" do
-		assert RomanNumberConverter.numeral(100) == "C"
-	end #test "3. Numeral(100)" do
+	end #test "3. Numeral(50)" do
 	
 	@tag :pending
-	test "4. Numeral(1000)" do
+	test "4. Numeral(100)" do
+		assert RomanNumberConverter.numeral(100) == "C"
+		assert RomanNumerals.numeral(103) == "CIII"
+		assert RomanNumerals.numeral(150) == "CL"
+		assert RomanNumerals.numeral(178) == "CLXXVIII"
+		assert RomanNumerals.numeral(350) == "CCCL"
+		assert RomanNumerals.numeral(403) == "CDIII"
+	end #test "4. Numeral(100)" do
+	
+	@tag :pending
+	test "5. Numeral(500)" do
+		assert RomanNumberConverter.numeral(500) == "D"
+		assert RomanNumerals.numeral(553) == "DLIII"
+		assert RomanNumerals.numeral(624) == "DCXXIV"
+		assert RomanNumerals.numeral(999) == "CMXCIX"
+	end #test "5. Numeral(500)" do
+	
+	@tag :pending
+	test "6. Numeral(1000)" do
 		assert RomanNumberConverter.numeral(1000) == "M"
-		
-	end #test "4. Numeral(1000)" do
+		assert RomanNumberConverter.numeral(2999) == "MMCMXCIX"
+		assert RomanNumberConverter.numeral(4325) == "MMMMCCCXXV"
+	end #test "6. Numeral(1000)" do
 end
