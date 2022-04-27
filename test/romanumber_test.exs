@@ -21,10 +21,13 @@ defmodule RomanNumberConverterTest do
 		assert RomanNumberConverter.numeral(30) == "XXX"
 		assert RomanNumberConverter.numeral(34) == "XXXIV"
 		assert RomanNumberConverter.numeral(40) == "XL"
-		assert RomanNumberConverter.numeral(6) == "VI"
-		assert RomanNumberConverter.numeral(7) == "VII"
-		assert RomanNumberConverter.numeral(8) == "VIII"
-		assert RomanNumberConverter.numeral(9) == "IX"
+		assert RomanNumberConverter.numeral(46) == "XLVI"
+		assert RomanNumberConverter.numeral(50) == "L"
+		assert RomanNumberConverter.numeral(58) == "LVIII"
+		assert RomanNumberConverter.numeral(60) == "LX"
+		assert RomanNumberConverter.numeral(70) == "LXX"
+		assert RomanNumberConverter.numeral(80) == "LXX"
+		assert RomanNumberConverter.numeral(90) == "XC"
 	end #test "2. Numeral(10)" do
   
     @tag :pending
