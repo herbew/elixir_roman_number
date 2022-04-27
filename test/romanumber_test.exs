@@ -10,5 +10,13 @@ defmodule RomanNumberConverterTest do
 		assert RomanNumberConverter.numeral(10) == "X"
 	end #test "2. Numeral(10)" do
   
-    
+    @tag :pending
+	test "3. Numeral(100)" do
+		assert RomanNumberConverter.numeral(10) == "C"
+		
+	@tag :pending
+	test "4. Numeral(1000)" do
+		assert RomanNumberConverter.numeral(10) == "M"
+		
+	end #test "4. Numeral(1000)" do
 end
